@@ -1,70 +1,81 @@
-<!DOCTYPE  html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- background color -->
-<body style="background-color:lightgray;">
 <head>
- 
-<!-- page title on the tab -->
-<title> MR-1 Cryptography CS4850 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR-1 Cryptography CS4850</title>
 
-  <!-- changing the style of each font -->
-<style>   
-h1 {
-  color: Blue;
-  font-family: Sans-serif;
-  font-size: 200%;
-}
-h2 {
-  
-  font-size: 150%;
-}
-  h3 {
-   font-family: Times New Roman;
-  font-size: 150%;
-}
-</style>
+    <!-- Changing the style of each font -->
+    <style>
+        h1 {
+            color: blue;
+            font-family: Sans-serif;
+            font-size: 200%;
+        }
+
+        h2 {
+            font-size: 150%;
+        }
+
+        h3 {
+            font-family: Times New Roman;
+            font-size: 150%;
+        }   
+    </style>
 </head>
 
- <!-- main body for the website -->
-<body>
+<body style="background-color: lightgray;">
+
+    <!-- Main body for the website -->
     <section>
-    
-   
+        <p><b><div id="header" style="border: 3.5px dashed #2d2d86; color: blue; font-family: Sans-serif; text-indent: 70px; font-size: 200%;">Post-Quantum Cryptograph Algorithms</div></b></p>
 
-<p><b><div id = "header" style = "border:3.5px dashed #2d2d86; color: Blue; font-family: Sans-serif; text-indent: 100px;
-  font-size: 200%;" > Quantum Cryptographic Analysis </div></b></p>
+        <h2><u>Project Group:</u>
+            <br> Evan Finelli: Technical Documentation Author
+            
+            <br> Zachary Escobar: Code Developer
+            
+            <br> Harrison Ho: Website Developer
+        </h2>
 
-     
-    <h2> <u> Project Group: </u>
-     <br>  Evan Finelli  : Techincal Documentation Author 
-     <br> Zachary Escobar: Code developer
-     <br> Harrison Ho: Website developer </h2>
-
-
-      <h3> Falculty Researcher: Manohar Raavi</h3>
+        <h3>Faculty Researcher: Manohar Raavi</h3>
     </section>
 
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks" onclick="openTabs(event, 'Program')">Program</button>
+        <button class="tablinks" onclick="openTabs(event, 'Document')">Document</button>
+    </div>
 
- 
-<!-- Tab links -->
-<div class="tab">
-  <button class="tablinks" onclick="openTabs(event, 'Program')">Program</button>
-  <button class="tablinks" onclick="openTabs(event, 'Document')">Document</button>
-  
-</div>
+    <!-- Tab content -->
+    <div id="Program" class="tabcontent">
+        <h3>Program</h3>
+        <p>Add content or functionality related to the program here.</p>
+    </div>
 
-<!-- Tab content -->
-<div id="Program" class="tabcontent">
-  <h3>Program</h3>
-  <p></p>
-</div>
+    <div id="Document" class="tabcontent">
+        <h3>Document</h3>
+        <p>Add content or functionality related to the document here.</p>
+    </div>
 
-<div id="Document" class="tabcontent">
-  <h3>Document</h3>
-  <p> </p>
-</div>
-
-
+    <!-- Script to handle tab functionality -->
+    <script>
+        function openTabs(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
+
 </html>
+
